@@ -7,7 +7,7 @@
 #include <cfloat>
 #include <iostream>
 
-#include "bignum.h"
+#include "../bignum/bignum.h"
 
 class rational_number {
 private: 

@@ -1,8 +1,8 @@
 #include <iostream>
 #include <climits>
 #include <cfloat>
-#include "rational.h"
-#include "bignum.h"
+#include "rational/rational.h"
+#include "bignum/bignum.h"
 
 // divide должен бы по-хорошему пару выдавать
 
