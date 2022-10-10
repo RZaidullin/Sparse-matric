@@ -482,14 +482,12 @@ std::string to_string (const bignum& bn) {
 bignum gcd (bignum lhs, bignum rhs) {
     lhs.isNegative = false;
     rhs.isNegative = false;
-    while (lhs.val != "0" && rhs.val != "0") {
-        if (bignum::compare_values(lhs.val, rhs.val) == bignum::cmp_res::LESSER) {
-            std::swap(lhs, rhs);
-        }
-        lhs -= rhs;
+    if (bignum::compare_values(lhs.val, rhs.val) == bignum::cmp_res::LESSER) {
+        std::swap(lhs, rhs);
     }
-    if (lhs.val == "0"){
-        return {false, rhs.val};
+    while (rhs.val != "0") {
+        lhs = lhs % rhs;
+        std::swap(lhs, rhs);
     }
-    return {false, lhs.val};
+    return lhs;
 }

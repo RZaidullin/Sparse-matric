@@ -81,7 +81,9 @@ int main()
     // x4--;
     // std::cout<<x4<<std::endl;
 
-    bignum q8 = 1234567891231;
+    rational_number q8 = 1234567891231;
+
+    q8 *= q8;
     std::cout<<q8<<std::endl;
 
     std::cout<<LONG_LONG_MIN<<std::endl;
