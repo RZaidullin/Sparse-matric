@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.16)
+
+project(Sparse_matrix)
+
+set(BigNum src/bignum/bignum.h src/bignum/bignum.cpp)
+set(Rational_number src/rational/rational.h src/rational/rational.cpp)
+
+set(sparse_matrix ${BigNum} ${Rational_number})
+
+add_executable(main main.cpp ${sparse_matrix})
